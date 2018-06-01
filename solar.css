@@ -1,0 +1,281 @@
+/* This CSS uses keyframes to move div elements around in a circle */
+/* It uses "vw" and "vh" to allow it to dynamically resize */
+
+/* I initially made the orbit time and orbit distance match the real-life times/distances */
+/* It ended up not looking all that great, so I stopped */
+/* The orbit times should still be similarly scaled to their actual orbits */
+/* I also left out Pluto until NASA comes back to their senses */
+
+#solarSystem{
+	display:block;
+	position:fixed;
+	top:50%;
+	transform:translateY(-50%);
+	background-color:rgb(0,63,100);
+	z-index:-101;
+	height:100vh;
+	width:100vw;
+	border-radius:50%;
+	margin:0 auto;
+}
+#sun{
+	position:absolute;
+	z-index:-100;
+	height:10vw;
+	width:10vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	transform:translate(-42%, -42%);
+	background-color:rgba(51,123,183,.2);
+	background:radial-gradient(circle,rgb(252,246,136),rgba(252,246,136,1),rgba(0,0,0,0),rgba(0,0,0,0));
+}
+#mercuryRing{
+	position:absolute;
+	z-index:-105;
+	height:8vw;
+	width:8vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-42%, -42%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#mercury{
+	position:absolute;
+	z-index:-99;
+	height:1.2vw;
+	width:1.2vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(231,113,13,0.9);
+	animation:mercuryMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:.88s; /* 88 days */;
+}
+@keyframes mercuryMove{ /* 60mil km */
+	from {transform:rotate(0deg) translateX(4vw)}
+	to {transform:rotate(-360deg) translateX(4vw)}
+}
+#venusRing{
+	position:absolute;
+	z-index:-105;
+	height:14vw;
+	width:14vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-46%, -46%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#venus{
+	position:absolute;
+	z-index:-98;
+	height:1.3vw;
+	width:1.3vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(128,100,162,0.9);
+	animation:venusMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:2.25s; /* 225 days */;
+}
+@keyframes venusMove{ /* 108mil km */
+	from {transform:rotate(20deg) translateX(7vw)}
+	to {transform:rotate(380deg) translateX(7vw)}
+}
+#earthRing{
+	position:absolute;
+	z-index:-100;
+	height:20vw;
+	width:20vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-46%, -46%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#earth{
+	position:absolute;
+	z-index:-96;
+	height:1.5vw;
+	width:1.5vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(51,123,13,0.9);
+	animation:earthMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:3.65s; /* 365 days */;
+}
+@keyframes earthMove{ /* 150mil km */
+	from {transform:rotate(-90deg) translateX(10vw)}
+	to {transform:rotate(-450deg) translateX(10vw)}
+}
+#marsRing{
+	position:absolute;
+	z-index:-100;
+	height:24vw;
+	width:24vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-47%, -47%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#mars{
+	position:absolute;
+	z-index:-95;
+	height:1.5vw;
+	width:1.5vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(201,13,13,0.9);
+	animation:marsMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:6.87s; /* 687 days */;
+}
+@keyframes marsMove{ /* 230mil km */
+	from {transform:rotate(-30deg) translateX(12vw)}
+	to {transform:rotate(330deg) translateX(12vw)}
+}
+#jupiterRing{
+	position:absolute;
+	z-index:-100;
+	height:36vw;
+	width:36vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-48%, -48%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#jupiter{
+	position:absolute;
+	z-index:-95;
+	height:2.3vw;
+	width:2.3vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(31,183,223,0.9);
+	animation:jupiterMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:8s; /* 4329 days */;
+}
+@keyframes jupiterMove{ /* 778mil km */
+	from {transform:rotate(-30deg) translateX(18vw)}
+	to {transform:rotate(330deg) translateX(18vw)}
+}
+#saturnRing{
+	position:absolute;
+	z-index:-100;
+	height:44vw;
+	width:44vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-48%, -48%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#saturn{
+	position:absolute;
+	z-index:-94;
+	height:1.9vw;
+	width:1.9vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(231,213,123,0.9);
+	animation:saturnMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:10.159s; /* 10159 days */;
+}
+@keyframes saturnMove{ /* 1.4bil km */
+	from {transform:rotate(-10deg) translateX(22vw)}
+	to {transform:rotate(350deg) translateX(22vw)}
+}
+#uranusRing{
+	position:absolute;
+	z-index:-100;
+	height:52vw;
+	width:52vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-48%, -48%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#uranus{
+	position:absolute;
+	z-index:-93;
+	height:1.5vw;
+	width:1.5vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(111,183,227,0.9);
+	animation:uranusMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:30.66s; /* 30660 days */;
+}
+@keyframes uranusMove{ /* 150mil km */
+	from {transform:rotate(-100deg) translateX(26vw)}
+	to {transform:rotate(260deg) translateX(26vw)}
+}
+#neptuneRing{
+	position:absolute;
+	z-index:-100;
+	height:58vw;
+	width:58vw;
+	top:50vh;
+	left:50vw;
+	transform:translate(-48%, -48%);
+	border-radius:50%;
+	background-color:rgba(51,123,183,0);
+	border:0.3vw solid rgba(51,123,183,0.7);
+}
+#neptune{
+	position:absolute;
+	z-index:-92;
+	height:1.5vw;
+	width:1.5vw;
+	top:50vh;
+	left:50vw;
+	border-radius:50%;
+	background-color:rgba(60,178,202,0.9);
+	animation:neptuneMove linear;
+	animation-iteration-count:infinite;
+	animation-duration:60.148s; /* 60148 days */;
+}
+@keyframes neptuneMove{ /* 4.5bil km */
+	from {transform:rotate(10deg) translateX(29vw)}
+	to {transform:rotate(-350deg) translateX(29vw)}
+}
+#orbits{
+	visibility:hidden;
+}
+/* Fancy button to toggle the orbits on and off.*/
+/* But how hard is it to leave out the "orbits" section if you don't want it? */
+.orbitBtn{
+	background:rgb(0,63,100);
+	color:rgb(51,123,183);
+	border-radius:50%;
+	cursor:pointer;
+}
+.orbitBtn:hover{
+	background:rgb(51,123,183);
+	color:rgb(0,63,100);
+	border-radius:50%;
+	cursor:pointer;
+}

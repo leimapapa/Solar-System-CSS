@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Solar System CSS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="planets" content="index,follow" />
+	<link rel="stylesheet" type="text/css" href="solar.css" />
+<script>
+//Native javaScript function to toggle visibility of the orbits
+//I'd put this in its own js file, but it's not really necessary
+function orbits(){
+	var orbits = document.getElementById("orbits"); 
+	if(orbits.style.visibility=='hidden'){
+		orbits.style.visibility='visible';
+		}else{orbits.style.visibility='hidden';}
+}
+</script>
+</head>
+
+<!--The body has inline styling to match the background color of the solarSystem
+Otherwise it's just a space-blue circle with the planets inside it.-->
+<body style="margin:0;background-color:rgb(0,63,100)">
+
+<!--button to toggle the orbits. Obviously delete this too if you're gonna use this as a background.-->
+<button class="orbitBtn" title="Toggle Orbits" onclick="orbits()">Orbits</button>
+
+	<div id="solarSystem">
+	<!--planets-->
+		<div id="sun"></div>
+		<div id="mercury"></div>
+		<div id="venus"></div>
+		<div id="earth"></div>
+		<div id="mars"></div>
+		<div id="jupiter"></div>
+		<div id="saturn"></div>
+		<div id="uranus"></div>
+		<div id="neptune"></div>
+		
+		<!--just delete the orbits if you don't want em-->
+		<div id="orbits">
+			<div id="mercuryRing" class="orbit"></div>
+			<div id="venusRing" class="orbit"></div>
+			<div id="earthRing" class="orbit"></div>
+			<div id="marsRing" class="orbit"></div>
+			<div id="jupiterRing" class="orbit"></div>
+			<div id="saturnRing" class="orbit"></div>
+			<div id="uranusRing" class="orbit"></div>
+			<div id="neptuneRing" class="orbit"></div>
+		</div>
+		<!--seriously, delete it.-->
+	</div>
+</body>
+</html>
