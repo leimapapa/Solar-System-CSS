@@ -272,6 +272,8 @@
 	color:rgb(51,123,183);
 	border-radius:50%;
 	cursor:pointer;
+	height:5vw;
+	width:5vw;
 }
 .orbitBtn:hover{
 	background:rgb(51,123,183);
